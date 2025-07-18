@@ -1,0 +1,12 @@
+server:
+  port: 8082
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      thirdPartyApiCB:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
