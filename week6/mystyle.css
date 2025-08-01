@@ -1,0 +1,14 @@
+.score-container {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  width: 300px;
+  font-family: Arial, sans-serif;
+}
+
+.result {
+  color: green;
+  font-weight: bold;
+}

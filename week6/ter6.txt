@@ -1,0 +1,3 @@
+npx create-react-app TrainersApp
+cd TrainersApp
+npm install react-router-dom
