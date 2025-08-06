@@ -1,0 +1,22 @@
+git status
+git checkout -b GitWork
+echo "<message>Hello from branch</message>" > hello.xml
+git status
+git add hello.xml
+git commit -m "Added hello.xml in GitWork branch"
+git checkout master
+echo "<message>Hello from master</message>" > hello.xml
+git add hello.xml
+git commit -m "Added hello.xml in master branch"
+git log --oneline --graph --decorate --all
+git diff GitWork
+git difftool GitWork
+git merge GitWork
+git add hello.xml
+git commit -m "Resolved conflict in hello.xml"
+echo "*.orig" >> .gitignore
+git add .gitignore
+git commit -m "Ignored backup files"
+git branch
+git branch -d GitWork
+git log --oneline --graph --decorate

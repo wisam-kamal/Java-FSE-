@@ -1,0 +1,24 @@
+# Setup and initialize Git
+mkdir GitDemo
+cd GitDemo
+git init
+
+# log file and folder
+echo "This is a sample log file." > debug.log
+mkdir log
+echo "Log folder content" > log/output.log
+
+# Create and edit .gitignore
+notepad++ .gitignore  # or use any text editor
+# Add:
+# *.log
+# log/
+
+# Add and commit
+git add .
+git status  # Should show only .gitignore and other non-ignored files
+git commit -m "Added .gitignore to ignore log files and log folder"
+
+# remote
+git remote add origin https://gitlab.com/your-username/GitDemo.git
+git push -u origin master

@@ -1,0 +1,22 @@
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git config --list
+
+# Notepad++ Integration
+git config --global core.editor "notepad++"
+git config --global -e
+
+# Repository Setup
+mkdir GitDemo
+cd GitDemo
+git init
+echo "Welcome to Git Hands-on Lab!" > welcome.txt
+git add welcome.txt
+git commit  # opens Notepad++
+git status
+
+# Link and Push to Remote
+git remote add origin https://gitlab.com/your-username/GitDemo.git
+git pull origin master --allow-unrelated-histories
+git push -u origin master
